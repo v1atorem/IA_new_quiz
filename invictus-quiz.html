@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Преврати любовь к фитнесу в профессию — INVICTUS Academy</title>
+<meta name="description" content="Ответь на 6 вопросов, подбери направление и запишись на бесплатный карьерный разбор в INVICTUS Academy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ===== Стиль invictusacademy.kz: меняйте здесь =====
+   На сайте в Тильде уже подключены DrukCyrillic, benzin и SFpro — квиз подхватит их сам.
+   В отдельном файле вместо них используются Oswald и Montserrat. */
+#ivq{
+  --bg:#0d0c0f; --card:#141317; --card2:#1c1b20; --line:#2a2930;
+  --text:#ffffff; --muted:#a3a3a3;
+  --red:#e12b1e; --red2:#9e0c01; --redHi:#ff3b2e; --redSoft:rgba(225,43,30,.13);
+  --ok:#62c584; --err:#ff5a4e;
+  --fHead:'DrukCyrillic','Oswald','Arial Narrow',sans-serif;
+  --fBtn:'benzin','Montserrat',system-ui,sans-serif;
+  --fBody:'SFpro','Montserrat',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  font-family:var(--fBody); color:var(--text);
+  background:
+    radial-gradient(900px 500px at 85% -10%,rgba(225,43,30,.22),transparent 60%),
+    radial-gradient(700px 500px at -10% 110%,rgba(225,43,30,.12),transparent 60%),
+    linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px) 0 0/56px 56px,
+    linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px) 0 0/56px 56px,
+    var(--bg);
+  min-height:100vh; display:flex; align-items:flex-start; justify-content:center;
+  padding:28px 16px 56px; box-sizing:border-box; -webkit-font-smoothing:antialiased;
+}
+#ivq *{box-sizing:border-box}
+body{margin:0;background:#0d0c0f}
+#ivq .wrap{width:100%;max-width:640px}
+#ivq .brand{font:700 13px/1 var(--fBtn);letter-spacing:.12em;text-transform:uppercase;color:#fff;margin-bottom:20px}
+#ivq .card{position:relative;background:linear-gradient(180deg,#17161b,#111014);border:1px solid var(--line);border-radius:22px;padding:30px 24px;box-shadow:0 30px 80px rgba(0,0,0,.55);overflow:hidden}
+#ivq .card::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,var(--red2),var(--red),var(--red2))}
+#ivq h1{font:600 46px/1 var(--fHead);text-transform:uppercase;letter-spacing:.01em;margin:0 0 16px}
+#ivq h1 em,#ivq h2 em{font-style:normal;color:var(--red)}
+#ivq h2{font:600 30px/1.08 var(--fHead);text-transform:uppercase;letter-spacing:.01em;margin:0 0 20px}
+#ivq p{margin:0 0 12px;line-height:1.55;color:var(--muted);font-size:16px}
+#ivq .hero-img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:16px;margin-bottom:22px;display:block}
+#ivq .meta{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 26px}
+#ivq .pill{font:600 13px/1 var(--fBody);padding:9px 14px;border-radius:999px;background:var(--card2);border:1px solid var(--line);color:#fff}
+#ivq .pill:first-child{background:#fff;color:var(--red);border-color:#fff;transform:rotate(-3deg)}
+#ivq .btn{appearance:none;border:0;cursor:pointer;width:100%;padding:19px 22px;border-radius:50px;background:linear-gradient(0deg,var(--red),var(--red2));color:#fff;font:600 15px/1.2 var(--fBtn);text-transform:uppercase;letter-spacing:.04em;box-shadow:0 10px 30px rgba(225,43,30,.35);transition:transform .12s,filter .2s,opacity .2s}
+#ivq .btn:hover{filter:brightness(1.12)}
+#ivq .btn:active{transform:scale(.985)}
+#ivq .btn[disabled]{opacity:.35;cursor:not-allowed;box-shadow:none;filter:grayscale(.4)}
+#ivq .btn.ghost{background:transparent;box-shadow:none;color:var(--muted);border:1px solid var(--line);width:auto;padding:14px 18px;font:600 13px/1 var(--fBody);text-transform:none;letter-spacing:0}
+#ivq .btn.ghost:hover{color:#fff;background:var(--card2);filter:none}
+#ivq .note{font-size:13px;color:var(--muted);text-align:center;margin-top:14px;line-height:1.45}
+/* progress */
+#ivq .progress{display:flex;align-items:center;gap:12px;margin-bottom:24px}
+#ivq .bar{flex:1;height:6px;border-radius:99px;background:var(--card2);overflow:hidden}
+#ivq .bar span{display:block;height:100%;background:linear-gradient(90deg,var(--red2),var(--redHi));border-radius:99px;transition:width .35s ease}
+#ivq .step{font:600 15px/1 var(--fHead);letter-spacing:.06em;text-transform:uppercase;color:#fff;white-space:nowrap}
+/* options */
+#ivq .opts{display:grid;gap:10px}
+#ivq .opt{display:flex;align-items:center;gap:14px;text-align:left;width:100%;cursor:pointer;padding:16px;border-radius:16px;background:var(--card2);border:1.5px solid var(--line);color:#fff;font:600 15.5px/1.35 var(--fBody);transition:border-color .15s,background .15s}
+#ivq .opt:hover{border-color:#4a4950}
+#ivq .opt .k{flex:none;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:transparent;border:1.5px solid #4a4950;font:600 15px/1 var(--fHead);color:var(--muted)}
+#ivq .opt.sel{border-color:var(--red);background:var(--redSoft)}
+#ivq .opt.sel .k{background:linear-gradient(0deg,var(--red),var(--red2));border-color:var(--red);color:#fff}
+/* feedback */
+#ivq .fb{margin-top:16px;padding:16px 18px;border-radius:16px;background:#fff;color:#0d0c0f;animation:ivqIn .3s ease;position:relative}
+#ivq .fb p{color:#1a1a1a;margin:0;font-size:15px;line-height:1.5}
+#ivq .fb p+p{margin-top:10px}
+#ivq .fb b{color:var(--red);display:block;font:600 14px/1 var(--fHead);letter-spacing:.06em;text-transform:uppercase;margin-bottom:5px}
+#ivq .nav{display:flex;gap:10px;margin-top:20px;align-items:center}
+#ivq .nav .btn:not(.ghost){flex:1}
+@keyframes ivqIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+#ivq .screen{animation:ivqIn .3s ease}
+/* result + form */
+#ivq .tag{display:inline-block;font:700 12px/1 var(--fBody);letter-spacing:.04em;text-transform:uppercase;color:var(--red);background:#fff;padding:9px 12px;border-radius:10px;margin-bottom:16px;transform:rotate(-2deg)}
+#ivq .offer{margin-top:20px;padding:18px;border-radius:18px;border:1.5px solid var(--red);background:var(--redSoft)}
+#ivq .offer-h{font:600 18px/1.1 var(--fHead);text-transform:uppercase;letter-spacing:.03em;margin-bottom:12px}
+#ivq .offer ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+#ivq .offer li{position:relative;padding-left:28px;font-size:15px;line-height:1.45;color:#fff}
+#ivq .offer li::before{content:"";position:absolute;left:0;top:2px;width:18px;height:18px;border-radius:50%;background:linear-gradient(0deg,var(--red),var(--red2)) ;-webkit-mask:none}
+#ivq .offer li::after{content:"";position:absolute;left:6px;top:6px;width:5px;height:8px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+#ivq .offer li.bonus{padding:12px 12px 12px 40px;background:#fff;color:#0d0c0f;border-radius:12px;font-weight:600}
+#ivq .offer li.bonus::before{left:12px;top:14px}
+#ivq .offer li.bonus::after{left:18px;top:18px}
+#ivq .offer li.bonus span{display:inline-block;margin-right:6px;padding:3px 7px;border-radius:6px;background:var(--red);color:#fff;font:700 11px/1.2 var(--fBody);text-transform:uppercase;letter-spacing:.04em;vertical-align:1px}
+#ivq .offer-note{margin-top:12px;font-size:14px;line-height:1.45;color:var(--muted)}
+#ivq .offer-note.urgent{color:#fff;padding-left:12px;border-left:3px solid var(--red)}
+#ivq .form-h{font:600 24px/1.05 var(--fHead);text-transform:uppercase;letter-spacing:.01em;color:#0d0c0f}
+#ivq form{margin-top:24px;display:grid;gap:14px;background:#fff;color:#0d0c0f;border-radius:18px;padding:22px 18px}
+#ivq label.f,#ivq form .f{display:grid;gap:7px;font:600 14px/1.3 var(--fBody);color:#0d0c0f}
+#ivq label.f small{font-weight:500;color:#8a8a8a}
+#ivq input[type=text],#ivq input[type=tel],#ivq select,#ivq textarea{width:100%;padding:15px 16px;border-radius:12px;border:1.5px solid #e2e2e2;background:#fff;color:#0d0c0f;font:500 16px/1.3 var(--fBody);outline:none;transition:border-color .15s}
+#ivq select{appearance:none;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%23e12b1e' stroke-width='2'%3E%3Cpath d='M1 1l5 5 5-5'/%3E%3C/svg%3E") no-repeat right 16px center;padding-right:40px}
+#ivq textarea{min-height:84px;resize:vertical}
+#ivq input:focus,#ivq select:focus,#ivq textarea:focus{border-color:var(--red)}
+#ivq .invalid{border-color:var(--err)!important}
+#ivq .err{color:var(--err);font-size:13px;font-weight:600;display:none}
+#ivq .err.show{display:block}
+#ivq .chips{display:flex;flex-wrap:wrap;gap:8px}
+#ivq .chip{cursor:pointer;padding:11px 16px;border-radius:50px;border:1.5px solid #e2e2e2;background:#fff;color:#0d0c0f;font:600 14px/1 var(--fBody)}
+#ivq .chip.sel{border-color:var(--red);background:var(--red);color:#fff}
+#ivq form .btn{margin-top:4px}
+#ivq form .note{color:#6b6b6b;margin-top:2px}
+#ivq .done{text-align:center;padding:12px 0}
+#ivq .done .ico{width:68px;height:68px;border-radius:50%;margin:0 auto 18px;display:grid;place-items:center;background:linear-gradient(0deg,var(--red),var(--red2));color:#fff;box-shadow:0 10px 30px rgba(225,43,30,.4)}
+@media (max-width:480px){
+  #ivq{padding:18px 12px 44px}
+  #ivq .card{padding:24px 16px}
+  #ivq h1{font-size:36px}
+  #ivq h2{font-size:24px}
+  #ivq form{padding:18px 14px}
+}
+
+#ivq .white,#ivq .hero-lead{color:#fff}
+#ivq .hero-lead{font-size:18px;line-height:1.55}
+#ivq .hero-lead strong{white-space:normal}
+#ivq .question-intro{margin-top:-8px;margin-bottom:20px}
+#ivq .city-extra{display:grid;gap:8px;margin-top:16px;color:#fff;font-size:14px;font-weight:600}
+#ivq [hidden]{display:none!important}
+#ivq .result-topics{padding:18px;background:var(--card2);border-radius:16px;margin:18px 0}
+#ivq .result-topics ul{margin:0;padding-left:20px;display:grid;gap:10px;font-size:15px;line-height:1.55}
+#ivq .compare{display:grid;gap:12px;margin-bottom:18px}
+#ivq .compare>div{padding:18px;background:var(--card2);border:1px solid var(--line);border-radius:16px}
+#ivq h3{font-size:17px;line-height:1.4;margin:0 0 8px;color:#fff}
+#ivq .compare p{font-size:15px;margin:0}
+#ivq .personal{margin-top:18px}
+#ivq .result-cta{margin-top:20px}
+#ivq form .form-description{font-size:14px;color:#555;margin:0}
+#ivq .field{display:grid;gap:7px}
+#ivq form>label.f{margin-bottom:-7px}
+#ivq .send-error{color:#b22218;font-size:14px;margin:0}
+#ivq .link-btn{display:block;text-decoration:none;margin-top:18px}
+#ivq .btn:focus-visible,#ivq .opt:focus-visible{outline:3px solid #fff;outline-offset:4px}
+#ivq form .btn:focus-visible{outline-color:#0d0c0f}
+#ivq{scroll-margin-top:16px}
+#ivq .card{overflow-wrap:anywhere}
+@media(prefers-reduced-motion:reduce){#ivq *,#ivq *::before,#ivq *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+#ivq .branch-description{display:block;margin-top:6px;color:var(--muted);font-size:14px;font-weight:400;line-height:1.5}
+</style>
+</head>
+<body>
+<div id="ivq"><div class="wrap">
+  <div class="brand">Invictus Academy</div>
+  <div class="card" id="ivq-root"></div>
+</div></div>
+
+<script>
+
+(function(){
+'use strict';
+/* endpoint — URL веб-приложения Google Apps Script (…/exec), которое создаёт сделку в amoCRM.
+   Пока endpoint пустой, квиз работает в режиме предпросмотра: заявки никуда не уходят,
+   событие Lead не отправляется. */
+var CONFIG={endpoint:'',formName:'invictus_career_quiz',whatsapp:'',redirectAfterSubmit:''};
+var Q=[{"id": "q1", "title": "Что ты хочешь изменить с помощью новой профессии?", "opts": [{"l": "Уйти с нынешней работы и зарабатывать в фитнесе", "fb": "Увольняться сразу не обязательно. Обучение можно совмещать с основной работой: онлайн-теория занимает всего 30 минут в день, а практика проходит по выходным."}, {"l": "Освоить профессию с возможностью расти в доходе", "fb": "Доход тренера зависит от его навыков, количества клиентов и стоимости тренировок. Начать стоит с подготовки к работе с людьми."}, {"l": "Пока понять, подходит ли мне работа тренером", "fb": "Любить тренироваться и тренировать других — разные вещи. Следующие вопросы помогут понять, насколько тебе интересна сама работа с людьми."}, {"l": "Учиться для себя, работать тренером не планирую", "fb": "Тогда будем ориентироваться на знания для собственных тренировок. Подготовка к работе с клиентами сейчас может быть тебе не нужна."}]}, {"id": "q2", "title": "Какой у тебя сейчас опыт в фитнесе?", "opts": [{"l": "Только начинаю тренироваться", "fb": "Опыт работы тренером для старта не нужен. Во время обучения предстоит разобраться в основах и освоить технику упражнений."}, {"l": "Регулярно тренируюсь для себя", "fb": "Ты уже знаком с тренировками со стороны клиента. Следующий шаг — научиться подбирать нагрузку для других людей и объяснять упражнения."}, {"l": "Тренируюсь давно, иногда помогаю знакомым", "fb": "В работе тренера важно учитывать цели, подготовку и ограничения каждого клиента. Этому нужно учиться отдельно от собственных тренировок."}, {"l": "Уже провожу тренировки", "fb": "Тогда учтём твой опыт. При подборе программы важно понять, какие знания ты хочешь усилить и нужна ли подготовка по новому направлению."}]}, {"id": "q3", "title": "Как тебе интереснее работать с людьми?", "opts": [{"l": "Тренировать человека персонально: подбирать упражнения и следить за его прогрессом", "dir": "tz", "fb": "Тебе стоит присмотреться к работе тренером тренажёрного зала. Здесь важны внимание к человеку, техника упражнений и подбор нагрузки под его задачу."}, {"l": "Вести занятия для группы: показывать упражнения и задавать темп", "dir": "gp", "fb": "Тебе стоит присмотреться к групповым программам. Здесь важно понятно объяснять движения и удерживать внимание сразу нескольких клиентов."}, {"l": "Интересны оба варианта, хочу сравнить", "dir": "both", "fb": "В зале можно сосредоточиться на задачах отдельного клиента. На групповом занятии — вести сразу нескольких людей. В результате покажем разницу между направлениями."}, {"l": "Пока сложно представить себя в этой роли", "dir": "both", "fb": "Начни со знакомства с рабочими задачами тренера. В результате покажем оба формата, чтобы тебе было проще выбрать, какой изучить подробнее."}]}, {"id": "q4", "title": "В каком городе тебе удобно проходить практику?", "opts": [{"l": "Алматы", "fb": "Практика проходит по выходным. Учтём город при подборе программы. До записи на обучение важно уточнить, где и по какому расписанию ты сможешь проходить практику."}, {"l": "Астана", "fb": "Практика проходит по выходным. Учтём город при подборе программы. До записи на обучение важно уточнить, где и по какому расписанию ты сможешь проходить практику."}, {"l": "Караганда", "fb": "Практика проходит по выходным. Учтём город при подборе программы. До записи на обучение важно уточнить, где и по какому расписанию ты сможешь проходить практику."}, {"l": "Шымкент", "fb": "Практика проходит по выходным. Учтём город при подборе программы. До записи на обучение важно уточнить, где и по какому расписанию ты сможешь проходить практику."}, {"l": "Другой город", "fb": "Практика проходит по выходным. Учтём город при подборе программы. До записи на обучение важно уточнить, где и по какому расписанию ты сможешь проходить практику."}]}, {"id": "q5", "title": "Когда ты хотел бы начать обучение?", "opts": [{"l": "В ближайший месяц", "fb": "Тогда при подборе программы начнём с ближайших дат и расписания, чтобы ты мог оценить, получится ли включить обучение в свой график."}, {"l": "Через 1–3 месяца", "fb": "Можно заранее разобраться в программе и спланировать время на обучение и практику."}, {"l": "Пока не определился — сначала хочу узнать условия", "fb": "Сначала стоит понять стоимость, нагрузку и расписание. После этого будет проще решить, когда начинать."}], "intro": "Онлайн-теория — всего 30 минут в день, практика — по выходным. Обучение можно совмещать с основной работой."}, {"id": "q6", "title": "А готов ли ты рассматривать платное обучение профессии?", "intro": "Сам карьерный разбор бесплатный. Этот вопрос — об обучении после него.", "opts": [{"l": "Да, если программа подходит под мою цель", "fb": "Вместе с программой ты сможешь узнать стоимость и условия, чтобы оценить обучение до записи."}, {"l": "Да, но хочу узнать об оплате частями", "fb": "Учтём это при подборе. Вместе с программой уточнишь доступные способы оплаты и размер платежей."}, {"l": "Пока не знаю — хочу сначала понять, чему научусь", "fb": "В программе сможешь посмотреть темы, практику и этапы подготовки. Это поможет понять, соответствует ли обучение твоей задаче."}, {"l": "Сейчас рассматриваю только бесплатные материалы", "fb": "Поняли. Покажем, с чего можно начать знакомство с профессией самостоятельно."}]}];
+var Q_TZ=Q;
+var Q_GP=[{"id": "q1", "title": "Зачем ты хочешь освоить профессию тренера групповых программ?", "opts": [{"l": "Сменить работу и вести групповые занятия", "fb": "Увольняться сразу не обязательно. Обучение можно совмещать с основной работой: онлайн-теория занимает всего 30 минут в день, а практика проходит по выходным."}, {"l": "Зарабатывать на любимом направлении фитнеса", "fb": "Доход зависит от количества занятий, условий клуба и спроса на тренировки. На карьерном разборе обсудим, как начать работать в выбранном направлении."}, {"l": "Понять, подойдёт ли мне работа с группой", "fb": "Тренер не только показывает упражнения: он объясняет, наблюдает за клиентами и помогает им выполнять движения. Важно понять, интересна ли тебе такая работа."}, {"l": "Лучше разбираться в занятиях для себя", "fb": "Тогда при выборе программы стоит обратить внимание на технику движений и построение занятия. Подготовка к работе с группой сейчас может быть тебе не нужна."}]}, {"id": "q2", "title": "Какой у тебя опыт в групповых занятиях?", "opts": [{"l": "Пока не посещаю, но хочу попробовать", "fb": "Сначала полезно познакомиться с разными занятиями со стороны клиента. Так будет проще понять, какое направление хочется изучать глубже."}, {"l": "Регулярно хожу на групповые занятия", "fb": "Ты уже знаешь этот формат со стороны клиента. На обучении предстоит научиться самому выстраивать занятие и понятно объяснять движения группе."}, {"l": "Давно занимаюсь и уверенно выполняю упражнения", "fb": "Личный опыт поможет ориентироваться в движениях. Для ведения группы также нужны навыки подбора упражнений, объяснения техники и работы с разным уровнем подготовки."}, {"l": "Уже веду занятия, хочу освоить новое направление", "fb": "Учтём твой опыт ведения группы. На разборе обсудим, какое направление ты хочешь добавить и какие знания и практику важно получить."}]}, {"id": "q3", "title": "Какие направления ты хотел бы освоить?", "opts": [{"l": "Йога", "specialty": "Йога", "fb": "В йоге предстоит изучить технику поз, последовательность упражнений и работу с дыханием. Важно научиться объяснять движения и учитывать подготовку клиентов.", "resultIntro": "Тебе интересна йога. Для ведения занятий предстоит изучить технику поз, построение последовательностей и способы объяснять движения клиентам."}, {"l": "Пилатес", "specialty": "Пилатес", "fb": "В пилатесе важны контроль движений, дыхание и точность выполнения. Тренеру нужно уметь замечать ошибки и подбирать варианты упражнений для клиентов.", "resultIntro": "Тебе интересен пилатес. Для ведения занятий предстоит освоить технику упражнений, работу с дыханием и способы корректировать движения клиентов."}, {"l": "Стретчинг", "specialty": "Стретчинг", "fb": "В стретчинге важно понимать, как выстраивать нагрузку для развития гибкости. Тренеру предстоит научиться подбирать упражнения с учётом возможностей клиентов.", "resultIntro": "Тебе интересен стретчинг. Для ведения занятий предстоит научиться подбирать упражнения на гибкость и учитывать возможности клиентов."}, {"l": "Силовые", "specialty": "Силовые групповые тренировки", "fb": "На силовом занятии важно подобрать упражнения и нагрузку, объяснить технику и следить за группой. Клиентам с разной подготовкой могут понадобиться разные варианты движений.", "resultIntro": "Тебе интересны силовые групповые тренировки. Для ведения занятий предстоит научиться подбирать нагрузку и следить за техникой нескольких клиентов."}, {"l": "Kick", "specialty": "Kick", "fb": "В Kick важно понятно показывать упражнения, задавать темп и следить за техникой клиентов. На обучении предстоит разобраться, как выстраивать занятие и подбирать нагрузку.", "resultIntro": "Тебе интересен Kick. Для ведения занятий предстоит научиться объяснять упражнения, выстраивать тренировку и подбирать нагрузку для группы."}, {"l": "Cycle", "specialty": "Cycle", "fb": "В Cycle важно научиться работать с велотренажёром, подбирать нагрузку и вести группу. Тренеру нужно понятно объяснять задания и следить за состоянием клиентов.", "resultIntro": "Тебе интересен Cycle. Для ведения занятий предстоит научиться работать с велотренажёром, подбирать нагрузку и понятно объяснять задания группе."}, {"l": "Пока выбираю — хочу сравнить направления", "specialty": "Пока выбираю направление ГП", "fb": "Необязательно ограничиваться одним направлением. Например, можно освоить стретчинг и силовые, чтобы вести разные форматы занятий. На карьерном разборе поможем выбрать сочетание и обсудим, с чего начать обучение.", "resultIntro": "Можно начать с одного направления, а затем освоить второе. Например, сочетать стретчинг и силовые, чтобы вести и мягкие, и силовые занятия. На разборе поможем выбрать сочетание под твою цель.", "compare": true}], "intro": "Можно выбрать несколько направлений — например, стретчинг + силовые. Так ты сможешь вести и мягкие, и силовые занятия и рассматривать больше вариантов работы."}, {"id": "q4", "title": "В каком городе тебе удобно проходить практику по групповым программам?", "opts": [{"l": "Алматы", "fb": "Практика проходит по выходным. На практике предстоит отрабатывать движения, объяснение упражнений и ведение группы. Перед записью уточним даты и расписание по выбранному направлению в твоём городе."}, {"l": "Астана", "fb": "Практика проходит по выходным. На практике предстоит отрабатывать движения, объяснение упражнений и ведение группы. Перед записью уточним даты и расписание по выбранному направлению в твоём городе."}, {"l": "Караганда", "fb": "Практика проходит по выходным. На практике предстоит отрабатывать движения, объяснение упражнений и ведение группы. Перед записью уточним даты и расписание по выбранному направлению в твоём городе."}, {"l": "Шымкент", "fb": "Практика проходит по выходным. На практике предстоит отрабатывать движения, объяснение упражнений и ведение группы. Перед записью уточним даты и расписание по выбранному направлению в твоём городе."}, {"l": "Другой город", "fb": "Практика проходит по выходным. На практике предстоит отрабатывать движения, объяснение упражнений и ведение группы. Перед записью уточним даты и расписание по выбранному направлению в твоём городе."}]}, {"id": "q5", "title": "Когда ты хотел бы начать обучение на тренера групповых программ?", "opts": [{"l": "В ближайший месяц", "fb": "На разборе начнём с ближайших дат по выбранному направлению. Уточним отдельно начало обучения и расписание очной практики."}, {"l": "Через 1–3 месяца", "fb": "Можно заранее выбрать направление и узнать расписание. Так ты сможешь спланировать обучение и подготовиться к практике."}, {"l": "Пока не определился — сначала хочу узнать условия", "fb": "Сравним направления по содержанию, стоимости и формату практики. После этого будет проще решить, какое обучение выбрать и когда начать."}], "intro": "Онлайн-теория — всего 30 минут в день, практика — по выходным. Обучение можно совмещать с основной работой."}, {"id": "q6", "title": "Готов ли ты рассматривать платное обучение на тренера групповых программ?", "intro": "Сам карьерный разбор бесплатный. Этот вопрос — об обучении после него.", "opts": [{"l": "Да, если программа подходит под мою цель", "fb": "Узнаешь, что входит в теорию и практику по выбранному направлению, сколько стоит обучение и как устроена помощь с трудоустройством."}, {"l": "Да, но хочу узнать об оплате частями", "fb": "На разборе уточнишь доступные способы оплаты, размер платежей и условия обучения по выбранному направлению."}, {"l": "Пока не знаю — хочу сначала понять, чему научусь", "fb": "Разберём, какие навыки нужны для ведения занятий, что ты будешь отрабатывать на практике и как устроена подготовка к работе с группой."}, {"l": "Сейчас рассматриваю только бесплатные материалы", "fb": "Покажем, как познакомиться с групповыми направлениями и лучше понять работу тренера, прежде чем выбирать обучение."}]}];
+var KEYS=['А','Б','В','Г','Д','Е','Ж'];
+var DIR_LABEL={tz:'Тренер тренажёрного зала',gp:'Тренер групповых программ',both:'Сравнение направлений'};
+var root=document.getElementById('ivq-root');
+var state={i:-1,ans:{},branch:null,answers:{tz:{},gp:{}},cityOther:'',contact:{name:'',phone:''},completedKey:''};
+var utm=readUtm();
+function esc(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+function emit(name,params){
+ try{if(window.fbq){window.fbq(name==='Lead'?'track':'trackCustom',name,params||{});}}catch(e){}
+ try{(window.dataLayer=window.dataLayer||[]).push(Object.assign({event:'ivq_'+name},params||{}));}catch(e){}
+}
+function track(){if(state.branch==='gp')return 'gp';var k=state.ans.q3;return k===0?'tz':'both';}
+function isMulti(q){return state.branch==='gp'&&q.id==='q3';}
+function answerIndexes(q){var value=state.ans[q.id];return Array.isArray(value)?value:(value==null?[]:[value]);}
+function answerText(q){return answerIndexes(q).map(function(k){return q.opts[k].l;}).join(' + ');}
+function chosen(q,k){return answerIndexes(q).indexOf(k)!==-1;}
+function gpOptions(){return answerIndexes(Q_GP[2]).map(function(k){return Q_GP[2].opts[k];});}
+function specialty(){return state.branch==='gp'?gpOptions().map(function(o){return o.specialty;}).join(' + '):'';}
+function chooseAnswer(q,k){
+ if(!isMulti(q)){state.ans[q.id]=k;return;}
+ var current=answerIndexes(q).slice();
+ if(q.opts[k].compare){state.ans[q.id]=current.length===1&&current[0]===k?[]:[k];return;}
+ current=current.filter(function(i){return !q.opts[i].compare;});
+ var at=current.indexOf(k);if(at===-1)current.push(k);else current.splice(at,1);
+ state.ans[q.id]=current.sort(function(a,b){return a-b;});
+}
+function feedback(q){
+ var picks=answerIndexes(q);if(!picks.length)return '';
+ if(isMulti(q)&&picks.length>1)return '<p><strong>Выбрано: '+esc(answerText(q))+'</strong></p><p>На карьерном разборе обсудим, как сочетать эти направления и в какой последовательности пройти обучение.</p>';
+ return '<p>'+esc(q.opts[picks[0]].fb)+'</p>';
+}
+function selectBranch(branch){state.branch=branch;Q=branch==='gp'?Q_GP:Q_TZ;state.ans=state.answers[branch];state.i=0;emit('QuizBranch',{branch:branch});renderQ();goTop();}
+function city(){return state.ans.q4===4?state.cityOther.trim():Q[3].opts[state.ans.q4].l;}
+function goTop(){root.scrollIntoView({behavior:'smooth',block:'start'});var title=root.querySelector('h1,h2');if(title){title.setAttribute('tabindex','-1');title.focus({preventScroll:true});}}
+function progress(done){return '<div class="progress"><div class="bar" role="progressbar" aria-label="Пройдено вопросов" aria-valuemin="0" aria-valuemax="6" aria-valuenow="'+done+'"><span style="width:'+(done/6*100)+'%"></span></div><div class="step">'+(done===6?'Готово':(state.i+1)+' из 6')+'</div></div>';}
+function renderStart(){
+ root.innerHTML='<div class="screen"><span class="tag">Фитнес — твоя будущая профессия</span><h1>Преврати любовь к фитнесу <em>в профессию</em></h1><p class="hero-lead">Хочешь работать тренером и выйти на доход от <strong>500 000 ₸ в месяц?</strong></p><p>Ответь на 6 вопросов и запишись на <strong class="white">бесплатный карьерный разбор.</strong></p><p>Разберём твою ситуацию, поможем выбрать направление и понять, какие шаги нужны для старта.</p><div class="meta"><span class="pill">≈ 2 минуты на квиз</span><span class="pill">Карьерный разбор бесплатно</span></div><button type="button" class="btn" id="ivq-go">Узнать, с чего начать</button></div>';
+ document.getElementById('ivq-go').onclick=function(){emit('QuizStart');renderBranch();goTop();};
+}
+
+function renderBranch(){
+ state.i=-1;
+ root.innerHTML='<div class="screen"><span class="tag">Выбери направление</span><h2>Каким тренером <em>ты хочешь стать?</em></h2><p>Выбери вариант, который тебе ближе. Для каждого направления — свои вопросы и карьерный разбор.</p><div class="opts"><button type="button" class="opt" id="ivq-branch-tz"><span class="k" aria-hidden="true">А</span><span><strong>Тренер тренажёрного зала</strong><br><span class="branch-description">Подбирать тренировки под цели клиента и следить за его прогрессом.</span></span></button><button type="button" class="opt" id="ivq-branch-gp"><span class="k" aria-hidden="true">Б</span><span><strong>Тренер групповых программ</strong><br><span class="branch-description">Вести йогу, пилатес, стретчинг, силовые, Kick или Cycle.</span></span></button></div><div class="nav"><button type="button" class="btn ghost" id="ivq-home">← На главный экран</button></div></div>';
+ document.getElementById('ivq-branch-tz').onclick=function(){selectBranch('tz');};
+ document.getElementById('ivq-branch-gp').onclick=function(){selectBranch('gp');};
+ document.getElementById('ivq-home').onclick=function(){renderStart();goTop();};
+}
+
+function canNext(){var q=Q[state.i];return answerIndexes(q).length>0&&(q.id!=='q4'||state.ans.q4!==4||state.cityOther.trim().length>=2);}
+function renderQ(){
+ var q=Q[state.i],sel=state.ans[q.id];
+ root.innerHTML='<div class="screen">'+progress(state.i)+'<h2>'+esc(q.title)+'</h2>'+(q.intro?'<p class="question-intro">'+esc(q.intro)+'</p>':'')+'<div class="opts" aria-label="Варианты ответа">'+q.opts.map(function(o,k){return '<button type="button" class="opt'+(chosen(q,k)?' sel':'')+'" aria-pressed="'+chosen(q,k)+'" data-k="'+k+'"><span class="k" aria-hidden="true">'+KEYS[k]+'</span><span>'+esc(o.l)+'</span></button>';}).join('')+'</div>'+(q.id==='q4'?'<label class="city-extra" id="ivq-city-wrap"'+(sel===4?'':' hidden')+'>Напиши свой город<input id="ivq-city" type="text" autocomplete="address-level2" maxlength="80" value="'+esc(state.cityOther)+'" placeholder="Твой город"></label>':'')+'<div id="ivq-fb" aria-live="polite">'+(answerIndexes(q).length?'<div class="fb">'+feedback(q)+'</div>':'')+'</div><div class="nav"><button type="button" class="btn ghost" id="ivq-back">← Назад</button><button type="button" class="btn" id="ivq-next"'+(canNext()?'':' disabled')+'>'+(state.i===5?'Посмотреть результат':'Далее')+'</button></div></div>';
+ root.querySelectorAll('.opt').forEach(function(b){b.onclick=function(){
+  var k=Number(b.dataset.k);chooseAnswer(q,k);
+  root.querySelectorAll('.opt').forEach(function(x){var selected=chosen(q,Number(x.dataset.k));x.classList.toggle('sel',selected);x.setAttribute('aria-pressed',String(selected));});
+  document.getElementById('ivq-fb').innerHTML=answerIndexes(q).length?'<div class="fb">'+feedback(q)+'</div>':'';
+  if(q.id==='q4'){document.getElementById('ivq-city-wrap').hidden=k!==4;if(k===4)document.getElementById('ivq-city').focus();}
+  document.getElementById('ivq-next').disabled=!canNext();emit('QuizAnswer',{branch:state.branch,question:q.id,answer:answerText(q)});
+ };});
+ var ci=document.getElementById('ivq-city');if(ci)ci.oninput=function(){state.cityOther=ci.value;document.getElementById('ivq-next').disabled=!canNext();};
+ document.getElementById('ivq-back').onclick=function(){state.i--;state.i<0?renderBranch():renderQ();goTop();};
+ document.getElementById('ivq-next').onclick=function(){if(!canNext())return;state.i++;state.i<6?renderQ():renderResult();goTop();};
+}
+function personal(){
+ if(state.branch==='gp'){var linesGP=['Твоя цель — перейти к работе тренером групповых программ. На разборе обсудим подготовку к ведению занятий и помощь с трудоустройством.','Твоя цель — зарабатывать на групповом направлении. На разборе обсудим навыки ведения занятий, первые шаги к работе и факторы, от которых зависит доход.','Твоя цель — понять, подходит ли тебе работа с группой. Обсудим задачи тренера и содержание обучения, чтобы тебе было проще принять решение.','Твоя цель — знания для себя. При выборе программы обрати внимание на технику движений и построение занятий.'];return '<p>'+esc(linesGP[state.ans.q1])+'</p>'+(state.ans.q2===3?'<p>Ты уже ведёшь занятия. Учтём этот опыт и обсудим подготовку по новому направлению.</p>':'');}
+ var lines=[
+ 'Твоя цель — перейти в новую профессию. Посмотри, какие знания и практику включает обучение и как устроена помощь с трудоустройством.',
+ 'Твоя цель — освоить профессию и развиваться в заработке. Помимо подготовки к тренировкам, обрати внимание на навыки поиска клиентов, продажи услуг и удержания.',
+ 'Посмотри, чему предстоит учиться и что тренер делает каждый день. Это поможет решить, хочешь ли ты развиваться в этом направлении.',
+ 'При выборе обучения обрати внимание на технику упражнений, подбор нагрузки и построение тренировочной программы.'
+ ];
+ var out='<p>'+esc(lines[state.ans.q1])+'</p>';
+ if(state.ans.q2===3)out+='<p>При подборе программы учтём твой опыт. На разборе расскажи, что хочешь освоить или улучшить.</p>';
+ return out;
+}
+function recommendation(){
+ if(state.ans.q1===3)return '<span class="tag">Твоя цель — знания для себя</span><h2>Лучше разбираться <em>в собственных тренировках</em></h2><p>Подготовка к работе с клиентами сейчас не является твоей целью. При выборе обучения посмотри, насколько его содержание подходит именно тебе.</p>';
+ var t=track();
+ if(state.branch==='gp')return gpRecommendation();
+ if(t==='tz')return '<span class="tag">Твой результат · Тренажёрный зал</span><h2>Присмотрись к работе <em>тренером тренажёрного зала</em></h2><p>Ты выбрал персональную работу: помогать человеку освоить упражнения и двигаться к его цели.</p><div class="result-topics"><p class="white"><strong>На обучении предстоит разобраться:</strong></p><ul><li>Как подбирать упражнения и нагрузку.</li><li>Как следить за техникой.</li><li>Как составлять программу под задачи клиента.</li></ul></div>';
+ if(t==='gp')return '<span class="tag">Твой результат · Групповые программы</span><h2>Присмотрись к работе <em>тренером групповых программ</em></h2><p>Ты выбрал формат, в котором тренер ведёт занятие для нескольких клиентов и задаёт общий темп.</p><div class="result-topics"><p class="white"><strong>На обучении предстоит разобраться:</strong></p><ul><li>Как выстроить занятие.</li><li>Как показывать и объяснять упражнения.</li><li>Как следить за техникой клиентов.</li></ul></div><p>Следующий шаг — сравнить направления: йогу, пилатес, стретчинг, силовые, Kick и Cycle.</p>';
+ return '<span class="tag">Твой результат · Сравнение направлений</span><h2>Начни со сравнения <em>двух направлений</em></h2><div class="compare"><div><h3>Тренер тренажёрного зала</h3><p>Подбирает упражнения и нагрузку под задачи клиента, объясняет технику и отслеживает прогресс.</p></div><div><h3>Тренер групповых программ</h3><p>Проводит занятие для нескольких клиентов: показывает упражнения, объясняет движения и управляет темпом тренировки.</p></div></div><p>Чтобы выбрать, сравни содержание обучения, практику и ежедневные задачи тренера.</p>';
+}
+
+function gpRecommendation(){
+ var options=gpOptions(),multiple=options.length>1,compare=options.length===1&&options[0].compare;
+ var label=options.map(function(o){return o.l;}).join(' + ');
+ var h=compare?'Выбери своё сочетание <em>групповых направлений</em>':(multiple?'Твои направления — <em>':'Твоё направление — <em>')+esc(label)+'</em>';
+ var intro=multiple?'Ты выбрал несколько направлений. На карьерном разборе обсудим, как освоить их поэтапно и подготовиться к ведению разных занятий.':options[0].resultIntro;
+ return '<span class="tag">Твой результат · Групповые программы</span><h2>'+h+'</h2><p>'+esc(intro)+'</p><div class="result-topics"><p class="white"><strong>Больше направлений — больше форматов работы</strong></p><p>Например, стретчинг + силовые позволяют вести и мягкие, и силовые занятия. С такими навыками можно рассматривать вакансии с разными требованиями.</p></div><div class="result-topics"><p class="white"><strong>Тебе предстоит научиться:</strong></p><ul><li>Выстраивать занятие и подбирать упражнения.</li><li>Понятно показывать и объяснять движения.</li><li>Следить за техникой клиентов с разным уровнем подготовки.</li></ul></div><p>На бесплатном карьерном разборе поможем выбрать сочетание направлений и обсудим обучение, практику и первые шаги к работе.</p>';
+}
+
+function renderResult(forceRecommendation){
+ var key=state.branch+JSON.stringify(state.ans)+state.cityOther;if(state.completedKey!==key){emit('QuizComplete',{branch:state.branch,specialty:specialty(),direction:DIR_LABEL[track()],goal:Q[0].opts[state.ans.q1].l,qualification:qualification()});state.completedKey=key;}
+ var free=state.ans.q6===3&&!forceRecommendation;
+ if(free){
+ root.innerHTML='<div class="screen">'+progress(6)+'<span class="tag">Первый шаг — знакомство с профессией</span><h2>Начни со знакомства <em>с работой тренера</em></h2><p>До выбора обучения попробуй три шага:</p><div class="result-topics"><ul><li>Поговори с работающим тренером о его графике и повседневных задачах.</li><li>Посети персональную тренировку и групповое занятие, обращая внимание на работу тренера.</li><li>Выпиши, что тебе нравится в этой профессии и какие вопросы пока остаются.</li></ul></div><p>Так будет проще понять, хочешь ли ты тренировать других людей.</p><button class="btn" id="ivq-view" type="button">Посмотреть мой результат</button><div class="nav"><button class="btn ghost" id="ivq-back" type="button">← Изменить ответы</button></div></div>';
+ if(state.branch==='gp'){root.querySelector('.result-topics ul').innerHTML='<li>Посети занятия по йоге, пилатесу, стретчингу, силовым, Kick или Cycle и сравни форматы.</li><li>Поговори с тренером о подготовке к занятиям и работе с группой.</li><li>Выпиши, какое направление хочется изучить глубже и какие вопросы остаются.</li>';}
+ document.getElementById('ivq-view').onclick=function(){renderResult(true);goTop();};
+ }else{
+ root.innerHTML='<div class="screen">'+progress(6)+recommendation()+'<div class="personal">'+personal()+'</div><div class="offer"><div class="offer-h">Как тебе начать работать тренером?</div><p>Приходи на <strong class="white">бесплатный карьерный разбор в INVICTUS Academy.</strong></p><ul><li>Обсудим твой опыт и цель.</li><li>Поможем выбрать направление и подходящую подготовку.</li><li>Разберём первые шаги к работе и заработку в фитнесе.</li></ul><p class="offer-note">Ты сможешь задать вопросы об обучении, практике и помощи с трудоустройством.</p><button class="btn result-cta" id="ivq-book" type="button">Записаться на бесплатный разбор</button></div><div id="ivq-form-slot"></div><div class="nav"><button class="btn ghost" id="ivq-back" type="button">← Изменить ответы</button></div></div>';
+ if(state.branch==='gp'&&state.ans.q1!==3){root.querySelector('.offer-h').textContent='Как тебе начать вести групповые занятия?';root.querySelector('.offer ul').innerHTML='<li>Обсудим твой опыт в групповых занятиях и цель.</li><li>Поможем выбрать одно или несколько направлений и подготовку к ведению группы.</li><li>Разберём первые шаги к работе тренером групповых программ.</li>';}
+ if(state.ans.q1===3){root.querySelector('.offer-h').textContent='Обсуди свою цель на бесплатном разборе';root.querySelector('.offer>p').innerHTML='Разберём, какие знания тебе нужны для собственных тренировок и какие программы стоит рассмотреть.';root.querySelector('.offer ul').innerHTML='<li>Обсудим твой опыт и цель.</li><li>Поможем разобраться в содержании программ.</li><li>Ответим на вопросы об обучении и практике.</li>';}
+ document.getElementById('ivq-book').onclick=function(){renderForm();document.getElementById('ivq-form').scrollIntoView({behavior:'smooth',block:'start'});document.getElementById('ivq-name').focus({preventScroll:true});};
+ }
+ document.getElementById('ivq-back').onclick=function(){state.i=5;renderQ();goTop();};
+}
+function renderForm(){
+ if(document.getElementById('ivq-form'))return;
+ emit('CareerFormView',{branch:state.branch,specialty:specialty()});
+ document.getElementById('ivq-form-slot').innerHTML='<form id="ivq-form" novalidate><div class="form-h">Твой первый шаг к новой профессии</div><p class="form-description">Оставь контакты — свяжемся в WhatsApp и согласуем время бесплатного карьерного разбора.</p><label class="f" for="ivq-name">Как тебя зовут?</label><div class="field"><input id="ivq-name" type="text" name="name" autocomplete="given-name" maxlength="80" placeholder="Имя" value="'+esc(state.contact.name)+'" aria-describedby="ivq-name-error"><span class="err" id="ivq-name-error">Напиши, как к тебе обращаться</span></div><label class="f" for="ivq-phone">Твой номер WhatsApp</label><div class="field"><input id="ivq-phone" type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="+7 (___) ___-__-__" value="'+esc(state.contact.phone)+'" aria-describedby="ivq-phone-error"><span class="err" id="ivq-phone-error">Проверь номер: нужно 10 цифр после +7</span></div><p id="ivq-send-error" class="send-error" role="alert" hidden></p><button class="btn" type="submit" id="ivq-submit">Записаться на бесплатный разбор</button><div class="note">Разбор бесплатный и не обязывает покупать обучение.</div></form>';
+ var form=document.getElementById('ivq-form'),name=form.elements.namedItem('name'),phone=form.elements.namedItem('phone');
+ name.oninput=function(){state.contact.name=name.value;};phone.onfocus=function(){if(!phone.value)phone.value='+7 (';};phone.oninput=function(){phone.value=maskPhone(phone.value);state.contact.phone=phone.value;};
+ form.onsubmit=async function(e){
+  e.preventDefault();var ok=true;
+  function check(el,valid,id){el.classList.toggle('invalid',!valid);el.setAttribute('aria-invalid',String(!valid));document.getElementById(id).classList.toggle('show',!valid);if(!valid)ok=false;}
+  check(name,name.value.trim().length>=2,'ivq-name-error');check(phone,/^7\d{10}$/.test(phone.value.replace(/\D/g,'')),'ivq-phone-error');if(!ok){form.querySelector('.invalid').focus();return;}
+  var data={formname:CONFIG.formName,request_type:'Бесплатный карьерный разбор',name:name.value.trim(),phone:'+'+phone.value.replace(/\D/g,''),city:city(),branch:state.branch,branch_name:state.branch==='gp'?DIR_LABEL.gp:DIR_LABEL.tz,direction:DIR_LABEL[track()],group_specialty:specialty(),goal:Q[0].opts[state.ans.q1].l,experience:Q[1].opts[state.ans.q2].l,start:Q[4].opts[state.ans.q5].l,payment_readiness:Q[5].opts[state.ans.q6].l,qualification:qualification(),page:location.href.split('#')[0],referrer:document.referrer,created_at:new Date().toISOString()};
+  Q.forEach(function(q){data[q.id]=answerText(q);});Object.assign(data,utm);
+  if(!CONFIG.endpoint){renderDone(data,true);goTop();return;}
+  var btn=document.getElementById('ivq-submit'),err=document.getElementById('ivq-send-error');btn.disabled=true;btn.textContent='Отправляем…';err.hidden=true;
+  try{await send(data);emit('Lead',{content_name:'Бесплатный карьерный разбор',content_category:data.direction,branch:data.branch,specialty:data.group_specialty});if(CONFIG.redirectAfterSubmit){location.href=CONFIG.redirectAfterSubmit;return;}renderDone(data,false);goTop();}
+  catch(e){btn.disabled=false;btn.textContent='Записаться на бесплатный разбор';err.textContent='Не удалось отправить заявку. Попробуй ещё раз чуть позже.';err.hidden=false;}
+ };
+}
+function qualification(){if(state.ans.q6===3)return 'Только бесплатные материалы';if(state.ans.q1===3)return 'Обучение для себя';if(state.ans.q5===0&&state.ans.q6<2)return 'Приоритетный контакт';return 'Нужна консультация';}
+function renderDone(d,preview){
+ root.innerHTML='<div class="screen done"><div class="ico" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div><h2>'+(preview?'Это предпросмотр <em>записи на разбор</em>':'Заявка на карьерный разбор <em>принята</em>')+'</h2><p>'+(preview?esc(d.name)+', в этой версии заявка не отправляется. Здесь после подключения приёма заявок появится подтверждение записи.':esc(d.name)+', свяжемся с тобой в WhatsApp по номеру '+esc(d.phone)+', чтобы согласовать время.')+'</p><p>Подумай, что хочешь обсудить в первую очередь: выбор направления, обучение или начало работы тренером.</p>'+(CONFIG.whatsapp&&!preview?'<a class="btn link-btn" target="_blank" rel="noopener" href="https://wa.me/'+esc(CONFIG.whatsapp)+'?text='+encodeURIComponent('Здравствуйте! Хочу записаться на бесплатный карьерный разбор. Направление: '+d.direction)+'">Написать в WhatsApp</a>':'')+(preview?'<button class="btn ghost" type="button" id="ivq-preview-back">← Вернуться к результату</button>':'')+'</div>';
+ if(preview)document.getElementById('ivq-preview-back').onclick=function(){renderResult(true);renderForm();goTop();};
+}
+function maskPhone(v){var d=v.replace(/\D/g,'');if(!d)return '';if(d.length===10&&v.trim().charAt(0)!=='+')d='7'+d;else if(d[0]==='8')d='7'+d.slice(1);if(d[0]!=='7')d='7'+d;d=d.slice(0,11);var r='+7';if(d.length>1)r+=' ('+d.slice(1,4);if(d.length>=4)r+=')';if(d.length>4)r+=' '+d.slice(4,7);if(d.length>7)r+='-'+d.slice(7,9);if(d.length>9)r+='-'+d.slice(9,11);return r;}
+function readUtm(){var keys=['utm_source','utm_medium','utm_campaign','utm_content','utm_term','utm_id','fbclid','gclid','yclid'],o={},saved={};try{saved=JSON.parse(sessionStorage.getItem('ivq_utm')||'{}');}catch(e){}var p=new URLSearchParams(location.search);keys.forEach(function(k){o[k]=p.get(k)||saved[k]||'';});try{sessionStorage.setItem('ivq_utm',JSON.stringify(o));}catch(e){}return o;}
+async function send(data){var fd=new URLSearchParams();Object.keys(data).forEach(function(k){fd.append(k,data[k]==null?'':String(data[k]));});var r=await fetch(CONFIG.endpoint,{method:'POST',body:fd,redirect:'follow'});if(!r.ok)throw new Error('HTTP '+r.status);if((r.headers.get('content-type')||'').includes('application/json')){var body=await r.json();if(body.success===false||body.ok===false)throw new Error('Application rejected');}}
+renderStart();
+})();
+
+</script>
+</body>
+</html>
